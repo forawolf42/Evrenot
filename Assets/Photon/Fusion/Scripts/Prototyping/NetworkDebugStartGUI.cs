@@ -70,7 +70,7 @@ public class NetworkDebugStartGUI : Fusion.Behaviour {
     if (_isMultiplePeerMode) {
       StartMultipleAutoClients(nds);
     } else {
-      nds.StartAutoClient();
+      nds.StartSharedClient();
     }
   }
   protected virtual void Start() {
