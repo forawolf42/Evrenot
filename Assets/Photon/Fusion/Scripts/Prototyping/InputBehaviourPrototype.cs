@@ -60,6 +60,10 @@ public class InputBehaviourPrototype : Fusion.Behaviour, INetworkRunnerCallbacks
     {
       frameworkInput.Buttons.Set(NetworkInputPrototype.MOUSE_DOWN, true);
     }
+    if (Input.GetKey(KeyCode.Space))
+    {
+      frameworkInput.Buttons.Set(NetworkInputPrototype.SPACE, true);
+    }
     if (Input.GetMouseButton(0)) {
       frameworkInput.Buttons.Set(NetworkInputPrototype.BUTTON_FIRE, true);
     }
@@ -121,6 +125,7 @@ public struct NetworkInputPrototype : INetworkInput {
 
   public const int BUTTON_RELOAD   = 15;
   public const int MOUSE_DOWN   = 16;
+  public const int SPACE   = 17;
 
   public NetworkButtons Buttons;
   public byte Weapon;
